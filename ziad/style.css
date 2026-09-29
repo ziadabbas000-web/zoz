@@ -1,0 +1,741 @@
+/* =========================================================
+   روتيني الصحي - CSS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #0b1220;
+    color: #f8fafc;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 30px auto 60px;
+}
+
+.eyebrow {
+    display: block;
+    color: #64e6a8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    width: 100%;
+    padding: 25px 4%;
+    background: #101828;
+    border-bottom: 1px solid #243047;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
+.header-content p {
+    color: #aab5c7;
+    font-size: 14px;
+}
+
+.date-box {
+    min-width: 105px;
+    padding: 12px 16px;
+    text-align: center;
+    background: #172236;
+    border: 1px solid #2b3952;
+    border-radius: 15px;
+}
+
+.date-box span {
+    display: block;
+    color: #9ca9bc;
+    font-size: 12px;
+}
+
+.date-box strong {
+    display: block;
+    font-size: 18px;
+    color: #64e6a8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 260px;
+    padding: 35px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        #16263b,
+        #10251f
+    );
+    border: 1px solid #29435a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 13px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background: #193d32;
+    color: #64e6a8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: clamp(27px, 5vw, 45px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #b8c2d1;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+/* =========================
+   PROGRESS RING
+========================= */
+
+.progress-ring {
+    width: 145px;
+    height: 145px;
+    min-width: 145px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(
+            circle,
+            #101828 57%,
+            transparent 59%
+        ),
+        conic-gradient(
+            #64e6a8 0deg,
+            #64e6a8 0deg,
+            #26344a 0deg
+        );
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.progress-ring span {
+    font-size: 25px;
+    font-weight: 900;
+    color: #64e6a8;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.stat {
+    padding: 22px;
+    border-radius: 20px;
+    background: #101828;
+    border: 1px solid #243047;
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 25px;
+    color: #64e6a8;
+    line-height: 1.2;
+}
+
+.stat small {
+    color: #9da9ba;
+    font-size: 12px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 22px;
+    background: #101828;
+    border: 1px solid #243047;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 24px;
+}
+
+/* =========================
+   NOTIFICATIONS
+========================= */
+
+.notification-panel {
+    background: linear-gradient(
+        135deg,
+        #101828,
+        #12251f
+    );
+}
+
+.notification-box {
+    padding: 18px;
+    border-radius: 16px;
+    background: #172236;
+    border: 1px solid #2b3952;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-box strong {
+    font-size: 16px;
+}
+
+.notification-box p {
+    color: #9eabbf;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+#enableNotifications {
+    flex-shrink: 0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #64e6a8;
+    color: #07140e;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+#enableNotifications:hover {
+    transform: translateY(-2px);
+}
+
+.switch-row {
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    background: #141f31;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.switch-row span {
+    display: block;
+}
+
+.switch-row strong {
+    display: block;
+    font-size: 14px;
+}
+
+.switch-row small {
+    display: block;
+    color: #8f9caf;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* =========================
+   SWITCH
+========================= */
+
+.switch-row input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 48px;
+    height: 26px;
+    border-radius: 30px;
+    background: #344054;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.switch-row input::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 3px;
+    right: 25px;
+    transition: 0.25s;
+}
+
+.switch-row input:checked {
+    background: #64e6a8;
+}
+
+.switch-row input:checked::after {
+    right: 3px;
+}
+
+/* =========================
+   RESET BUTTON
+========================= */
+
+.reset-btn {
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: #202c40;
+    color: #dce4ef;
+    border: 1px solid #34445d;
+    transition: 0.2s;
+}
+
+.reset-btn:hover {
+    background: #293850;
+}
+
+/* =========================
+   TASKS
+========================= */
+
+.tasks {
+    display: grid;
+    gap: 10px;
+}
+
+.task,
+.prayer-card {
+    width: 100%;
+    padding: 16px;
+    border-radius: 15px;
+    background: #151f30;
+    border: 1px solid #26344a;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: 0.2s;
+}
+
+.task:hover,
+.prayer-card:hover {
+    transform: translateY(-1px);
+    border-color: #3c526e;
+}
+
+.task.done,
+.prayer-card.done {
+    background: #10271f;
+    border-color: #286b50;
+}
+
+.task-check,
+.prayer-check {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    border: 2px solid #56657b;
+    background: transparent;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.task.done .task-check,
+.prayer-card.done .prayer-check {
+    background: #64e6a8;
+    border-color: #64e6a8;
+    color: #07140e;
+}
+
+.task-info,
+.prayer-info {
+    flex: 1;
+}
+
+.task-info strong,
+.prayer-info strong {
+    display: block;
+    font-size: 15px;
+}
+
+.task-info small,
+.prayer-info small {
+    color: #8f9caf;
+    font-size: 11px;
+}
+
+.task-time,
+.prayer-time {
+    color: #64e6a8;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* =========================
+   FOOD
+========================= */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.food-card {
+    padding: 20px;
+    min-height: 190px;
+    border-radius: 18px;
+    background: #151f30;
+    border: 1px solid #26344a;
+}
+
+.food-icon {
+    display: block;
+    font-size: 31px;
+    margin-bottom: 12px;
+}
+
+.food-card h3 {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.food-card p {
+    color: #d2d9e3;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.food-card small {
+    color: #8996aa;
+    font-size: 11px;
+}
+
+/* =========================
+   WATER
+========================= */
+
+.water-panel {
+    padding: 25px;
+    border-radius: 18px;
+    background: #13243a;
+    border: 1px solid #29425f;
+}
+
+.water-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.water-top div {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.water-top strong {
+    font-size: 45px;
+    color: #65c9ff;
+    line-height: 1;
+}
+
+.water-top span {
+    color: #aeb9c8;
+}
+
+#addWater {
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #65c9ff;
+    color: #07131d;
+    font-weight: 800;
+}
+
+.water-bar {
+    width: 100%;
+    height: 13px;
+    margin-top: 22px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #27364c;
+}
+
+#waterFill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: #65c9ff;
+    transition: width 0.3s ease;
+}
+
+/* =========================
+   TIPS
+========================= */
+
+.tip-list {
+    display: grid;
+    gap: 10px;
+}
+
+.tip-list div {
+    padding: 14px 16px;
+    border-radius: 13px;
+    background: #151f30;
+    border: 1px solid #26344a;
+    color: #dce3ed;
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #77859a;
+    font-size: 12px;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    transform: translate(-50%, 100px);
+    padding: 12px 20px;
+    border-radius: 13px;
+    background: #64e6a8;
+    color: #07140e;
+    font-weight: 800;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        padding: 20px;
+    }
+
+    .header-content h1 {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .progress-ring {
+        width: 110px;
+        height: 110px;
+        min-width: 110px;
+    }
+
+    .progress-ring span {
+        font-size: 21px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin-top: 18px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .date-box {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .progress-ring {
+        margin: 0 auto;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .notification-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    #enableNotifications {
+        width: 100%;
+    }
+
+    .section-title {
+        align-items: flex-start;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .task,
+    .prayer-card {
+        padding: 13px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card {
+        min-height: auto;
+    }
+
+    .water-top {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .water-top div {
+        justify-content: center;
+    }
+
+    #addWater {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .section-title {
+        flex-direction: column;
+    }
+
+    .reset-btn {
+        width: 100%;
+    }
+
+}

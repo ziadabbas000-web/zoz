@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#101828"
+    >
+
+    <title>روتيني الصحي</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="topbar">
+
+        <div class="header-content">
+
+            <span class="eyebrow">
+                HEALTH & FITNESS
+            </span>
+
+            <h1>
+                روتيني الصحي
+            </h1>
+
+            <p>
+                مدرسة • مذاكرة • صلاة • حركة • نوم
+            </p>
+
+        </div>
+
+
+        <div class="date-box">
+
+            <span id="todayName">
+                اليوم
+            </span>
+
+            <strong id="todayDate">
+                --/--
+            </strong>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    هدف اليوم
+                </span>
+
+                <h2>
+                    اهتم بصحتك خطوة بخطوة 💪
+                </h2>
+
+                <p>
+                    تابع يومك، صلاتك، شرب المية،
+                    المذاكرة والنوم من مكان واحد.
+                </p>
+
+            </div>
+
+
+            <div class="progress-ring">
+
+                <span id="progressPercent">
+                    0%
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STATS
+        ========================== -->
+
+        <section class="stats">
+
+
+            <div class="stat">
+
+                <span>
+                    💧
+                </span>
+
+                <strong id="waterCount">
+                    0
+                </strong>
+
+                <small>
+                    أكواب مية
+                </small>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <span>
+                    ✅
+                </span>
+
+                <strong id="doneCount">
+                    0
+                </strong>
+
+                <small>
+                    مهام خلصت
+                </small>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <span>
+                    🔔
+                </span>
+
+                <strong id="notificationStatus">
+                    مقفولة
+                </strong>
+
+                <small>
+                    الإشعارات
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             NOTIFICATIONS
+        ========================== -->
+
+        <section class="section notification-panel">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        NOTIFICATIONS
+                    </span>
+
+                    <h2>
+                        التذكيرات
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="notification-box">
+
+
+                <div>
+
+                    <strong>
+                        فعّل إشعارات روتيني الصحي
+                    </strong>
+
+                    <p>
+                        التذكيرات تشمل المهام والصلوات والمية.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="enableNotifications"
+                >
+                    تفعيل الإشعارات 🔔
+                </button>
+
+
+            </div>
+
+
+
+            <!-- تشغيل وإيقاف كل التذكيرات -->
+
+            <label class="switch-row">
+
+                <span>
+
+                    <strong>
+                        تشغيل التذكيرات
+                    </strong>
+
+                    <small>
+                        تقدر توقف كل التذكيرات في أي وقت.
+                    </small>
+
+                </span>
+
+
+                <input
+                    type="checkbox"
+                    id="remindersToggle"
+                    checked
+                >
+
+            </label>
+
+
+
+            <!-- تشغيل وإيقاف الأذان -->
+
+            <label class="switch-row">
+
+                <span>
+
+                    <strong>
+                        أذان الصلاة
+                    </strong>
+
+                    <small>
+                        جاهز لإضافة ملف adhan.mp3 لاحقًا.
+                    </small>
+
+                </span>
+
+
+                <input
+                    type="checkbox"
+                    id="adhanToggle"
+                    checked
+                >
+
+            </label>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             DAILY PLAN
+        ========================== -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        DAILY PLAN
+                    </span>
+
+                    <h2>
+                        جدول اليوم
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="reset-btn"
+                    id="resetBtn"
+                >
+                    إعادة اليوم
+                </button>
+
+
+            </div>
+
+
+            <div
+                id="tasks"
+                class="tasks"
+            >
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PRAYERS
+        ========================== -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        PRAYERS
+                    </span>
+
+                    <h2>
+                        الصلوات
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                id="prayers"
+                class="tasks"
+            >
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOD
+        ========================== -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        FOOD
+                    </span>
+
+                    <h2>
+                        أفكار للأكل
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card">
+
+                    <span class="food-icon">
+                        🍳
+                    </span>
+
+                    <h3>
+                        الفطار
+                    </h3>
+
+                    <p>
+                        بيض + عيش + خيار وطماطم
+                    </p>
+
+                    <small>
+                        أو فول + عيش + خضار
+                    </small>
+
+                </article>
+
+
+
+                <article class="food-card">
+
+                    <span class="food-icon">
+                        🍌
+                    </span>
+
+                    <h3>
+                        سناك المدرسة
+                    </h3>
+
+                    <p>
+                        فاكهة أو زبادي
+                    </p>
+
+                    <small>
+                        وخلي المية معاك
+                    </small>
+
+                </article>
+
+
+
+                <article class="food-card">
+
+                    <span class="food-icon">
+                        🍗
+                    </span>
+
+                    <h3>
+                        الغدا
+                    </h3>
+
+                    <p>
+                        فراخ أو سمك أو بيض
+                    </p>
+
+                    <small>
+                        مع رز أو مكرونة أو عيش + خضار
+                    </small>
+
+                </article>
+
+
+
+                <article class="food-card">
+
+                    <span class="food-icon">
+                        🥪
+                    </span>
+
+                    <h3>
+                        العشا
+                    </h3>
+
+                    <p>
+                        جبنة أو بيض + عيش
+                    </p>
+
+                    <small>
+                        وممكن زبادي + فاكهة
+                    </small>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             WATER
+        ========================== -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        WATER
+                    </span>
+
+                    <h2>
+                        متابعة المية
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="water-panel">
+
+
+                <div class="water-top">
+
+
+                    <div>
+
+                        <strong id="waterBig">
+                            0
+                        </strong>
+
+                        <span>
+                            أكواب اليوم
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addWater"
+                    >
+                        + كوب مية
+                    </button>
+
+
+                </div>
+
+
+                <div class="water-bar">
+
+                    <div
+                        id="waterFill"
+                    >
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             TIPS
+        ========================== -->
+
+        <section class="section tips">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        REMEMBER
+                    </span>
+
+                    <h2>
+                        افتكر
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="tip-list">
+
+
+                <div>
+                    🕌 حافظ على صلاتك في مواعيدها.
+                </div>
+
+
+                <div>
+                    🥗 كل وجباتك بشكل منتظم ومتوازن.
+                </div>
+
+
+                <div>
+                    🏃 اختار حركة أو رياضة بتحبها.
+                </div>
+
+
+                <div>
+                    📚 قوم اتحرك شوية أثناء المذاكرة.
+                </div>
+
+
+                <div>
+                    😴 حاول تاخد نوم كفاية.
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            روتيني الصحي • خطوة صغيرة كل يوم
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+        تم الحفظ ✅
+    </div>
+
+
+
+    <!-- =========================
+         AUDIO - ADHAN
+         جاهز لإضافة الملف لاحقًا
+    ========================== -->
+
+    <!--
+        بعدين اعمل فولدر اسمه:
+
+        audio
+
+        وحط جواه:
+
+        adhan.mp3
+
+        وسيكون المسار:
+        audio/adhan.mp3
+    -->
+
+    <audio
+        id="adhanAudio"
+        preload="auto"
+    >
+
+        <source
+            src="audio/adhan.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
